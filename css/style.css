@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0px;
+}
+:root {
+  --color-light: #f7f7f7;
+  --color-mid: #93deff;
+  --color-gray: #606470;
+  --color-dark: #323643;
+
+  --fs-title: 4rem;
+  --fs-subtitle: 2rem;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Montserrat:wght@300&family=Roboto:wght@300&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+/* Navbar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-dark);
+  border-bottom: 1px solid var(--color-light);
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+}
+.nav-links li {
+  padding: 1.3rem 2rem;
+  list-style-type: none;
+  display: block;
+  transition: 0.2s ease;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: var(--color-light);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.nav-links li:hover {
+  background-color: var(--color-mid);
+}
+/* Hamburger Menu */
+.hamburger-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  height: 22px;
+  display: none;
+}
+.hamburger-menu .bar {
+  background-color: var(--color-light);
+  width: 30px;
+  height: 5px;
+  border-radius: 10px;
+}
+.title h3 {
+  font-size: 1.5rem;
+}
+/* Logo goes here*/
+.logo {
+  font-size: 2rem;
+  color: var(--color-mid);
+  text-decoration: none;
+  padding-left: 3rem;
+}
+@media (max-width: 863px) {
+  .nav-links {
+    display: none;
+  }
+
+  .header {
+    height: 4rem;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+}
+@media (max-width: 520px) {
+  .logo {
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+/* Background Image */
+.jumbotron {
+  background-image: linear-gradient(#323643, #606470, #93deff);
+  height: 60vh;
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.jumbotron h1 {
+  font-size: var(--fs-title);
+}
+.jumbotron .title {
+  padding: 3rem;
+  line-height: 1.5;
+}
+@media (max-width: 885px) {
+  .jumbotron h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .jumbotron h1 {
+    font-size: 2.8rem;
+  }
+}
+/* Main Section Container */
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-info {
+  padding: 3rem 0;
+  margin: 3rem 0;
+}
+.main-map {
+  height: 450px;
+  width: 600px;
+}
+.main-inner {
+  line-height: 1.5rem;
+  padding: 1.2rem 0;
+}
+.main-inner a {
+  text-decoration: none;
+}
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 650px) {
+}
+/* Contact Page */
+.hero-container {
+  background-color: var(--color-gray);
+  height: 20vh;
+}
+.subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.5rem;
+  height: 25vh;
+  padding: 1.3rem 3.3rem;
+  line-height: 1.8rem;
+}
+.contact-form-container {
+  height: 40vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--color-dark);
+  display: flex;
+}
+.hero-container {
+  background-image: linear-gradient(#606470, #93deff);
+  color: var(--color-light);
+}
+.hero-inner-container h1 {
+  font-size: var(--fs-title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.form-group {
+  line-height: 1.5rem;
+  width: 25rem;
+  padding: 2rem 3.3rem;
+  color: var(--color-light);
+}
+.form-group .submit-btn {
+  font-size: 1.2rem;
+  background-color: var(--color-mid);
+  border: 1px solid var(--color-mid);
+  cursor: pointer;
+}
+.form-group .submit-btn:hover {
+  background-color: var(--color-gray);
+  color: var(--color-light);
+  border: 1px solid var(--color-gray);
+}
+.contact-info {
+  background-color: var(--color-dark);
+  height: 40vh;
+  width: 25rem;
+  color: var(--color-light);
+  padding: 2rem 0;
+}
+.contact-info a {
+  color: var(--color-light);
+  text-decoration: none;
+  line-height: 2rem;
+}
+/* Footer */
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
